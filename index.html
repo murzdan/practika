@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connected modules -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom scripts and styles -->
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script/main.js"></script>
+
+    <title>Просмотр файлов</title>
+</head>
+
+<body class="bg-gray-50">
+    <div class="h-screen flex">
+        <div class="h-full w-80 flex flex-col p-12">
+
+            <div class="w-full flex flex-col h-1/2 ">
+                <a class=" black block p-3 text-xl hover:border-b-2 border-black transition-all duration-100 "
+                    href="#">Главная</a>
+            </div>
+            <div class="w-full flex flex-col h-1/2">
+                <a class=" text-left block p-3 text-gray-700" href="#">Теги</a>
+                <ul class="block p-3 list-none ">
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-green-200 before:rounded-3xl">
+                        <a href="#">Green</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-blue-200 before:rounded-3xl">
+                        <a href="#">Blue</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-pink-200 before:rounded-3xl">
+                        <a href="#">Pink</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-yellow-200 before:rounded-3xl">
+                        <a href="#">Yellow</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-purple-200 before:rounded-3xl">
+                        <a href="#">Purple</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-lime-200 before:rounded-3xl">
+                        <a href="#">Lime</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-orange-200 before:rounded-3xl">
+                        <a href="#">Orange</a>
+                    </li>
+                    <li
+                        class="before:inline-block before:w-3 before:h-3 before:mr-3 before:bg-gray-200 before:rounded-3xl">
+                        <a href="#">All tags</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-1 bg-gray-100 flex flex-col p-12 shadow-lg border border-gray-200 rounded-l-3xl relative">
+            <div class="text-3xl p-2">Хранилище документов</div>
+            <div class="mt-6 h-12 bg-white rounded-full shadow-md w-full relative">
+
+                <input class="w-full outline-none bg-white h-12 rounded-full pl-8 pr-28 " type="text" name="text"
+                    placeholder="Поиск">
+                <button class="h-10 border-none absolute "><i
+                        class="fas fa-filter p-2  rounded-full hover:bg-blue-100 absolute right-14 top-2 hover:transition-all duration-300 text-slate-700"></i></button>
+                <button class="h-10 border-none absolute "><i
+                        class="fas fa-search p-2  rounded-full hover:bg-blue-100 absolute right-5 top-2 hover:transition-all duration-300 text-slate-700"></i></button>
+
+            </div>
+            <div id="applied-filters" class="mt-2 h-12 w-full flex scroller content"></div>
+            <div class="rounded-3xl mt-3 flex-1 overflow-y-auto shadow-xl flex flex-col text-slate-700 list-wrapper">
+                <div
+                    class="px-4 sticky top-0 shadow-sm h-fit font-medium cursor-pointer text-left text-sm w-full bg-blue-100 rounded-t-3xl flex flex-nowrap justify-between items-center gap-1">
+                    <span class="w-2/6 px-4 header-list">ТЕКСТ</span>
+                    <span
+                        class="flex flex-row flex-nowrap items-center gap-4 w-1/6 p-4 dateHeader header-list data-date sort-header"
+                        data-sort="data">
+                        ДАТА
+                        <i class="fa-solid fa-angle-up text-slate-700 rotate-180"></i>
+                    </span>
+                    <span
+                        class="flex flex-row flex-nowrap items-center gap-4 w-1/6 p-4 header-list data-size sort-header"
+                        data-sort="size">
+                        РАЗМЕР
+                    </span>
+                    <span
+                        class="flex flex-row flex-nowrap items-center gap-4 w-1/6 p-4 header-list data-author sort-header"
+                        data-sort="author">АВТОР
+                    </span>
+                    <span
+                        class="flex flex-row flex-nowrap items-center gap-4 w-1/6 p-4 header-list data-lang sort-header"
+                        data-sort="language">ЯЗЫК
+                    </span>
+                </div>
+                <div class="flex flex-col list-content">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

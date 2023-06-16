@@ -1,0 +1,24 @@
+.scroller {
+	box-sizing: border-box;
+	overflow: hidden;
+ 
+	overflow-x: auto;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+ 
+	white-space: nowrap;
+}
+.scroller::-webkit-scrollbar {
+	display: none;
+}
+.content {
+	max-width: calc(100vw - 20rem);
+}
+
+.list-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
